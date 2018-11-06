@@ -19,4 +19,3 @@
           - network 0.0.0.0 255.255.255.255 area 0
 
       register: print_output
-
