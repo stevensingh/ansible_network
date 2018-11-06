@@ -1,5 +1,5 @@
 ---
-- name: Manage GNS3 devices
+- name: Manage GNS3 Devices
   hosts: SW1
   gather_facts: false
   connection: local
