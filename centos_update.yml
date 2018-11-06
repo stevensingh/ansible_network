@@ -1,0 +1,10 @@
+---
+
+- hosts: Centos_hosts
+  remote_user: osboxes
+  tasks:
+
+    - name: upgrade all packages
+      yum:
+        name: '*'
+        state: latest

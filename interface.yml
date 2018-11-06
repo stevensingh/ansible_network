@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: steven
+  tasks:
+
+  - name: configure interface
+    ios_config:
+      lines:
+        - description test interface
+        - ip address 172.16.0.1 255.255.255.0
+      parents: interface GigabitEthernet0/5 

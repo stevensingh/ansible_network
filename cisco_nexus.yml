@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+
+    - name: set hostname
+      nxos_config:
+        lines: hostname {{ inventory_hostname }}
+        save_when: modified
