@@ -1,7 +1,6 @@
 ---
 
 - hosts: all
-  remote_user: osboxes
   tasks:
 
   - name: upgrade all packages
@@ -11,12 +10,11 @@
 
   - name: "Installing Docker Prerequisite packages"
     yum:
-      name: "{{ item }}"
-      state: latest
-      with_items:
+      name:
         - yum-utils
         - device-mapper-persistent-data
         - lvm2
+      state: latest
   
   - name: "Configuring docker-ce repo"
     get_url:
