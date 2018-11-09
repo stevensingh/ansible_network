@@ -1,14 +1,15 @@
+---
 
-sts: Centos_hosts
+- hosts: Centos_hosts
   remote_user: osboxes
   tasks:
 
-    - name: upgrade all packages
+  - name: upgrade all packages
       yum:
         name: '*'
         state: latest
-                
-        - name: "Installing Docker Prerequisite packages"
+		
+	- name: "Installing Docker Prerequisite packages"
       yum:
         name: "{{ item }}"
         state: latest
@@ -16,19 +17,19 @@ sts: Centos_hosts
         - yum-utils
         - device-mapper-persistent-data
         - lvm2
-        - name: "Configuring docker-ce repo"
-        get_url:
+  - name: "Configuring docker-ce repo"
+      get_url:
         url: https://download.docker.com/linux/centos/docker-ce.repo
         dest: /etc/yum.repos.d/docker-ce.repo
         mode: 0644
-                
-    - name: " Installing Docker latest version"
+		
+  - name: " Installing Docker latest version"
       yum:
         name: docker-ce
         state: present
-                
-    - name: " Starting and Enabling Docker service"
+		
+  - name: " Starting and Enabling Docker service"
       service:
-         name: docker
-         state: started
-         enabled: yes
+        name: docker
+        state: started
+        enabled: yes
