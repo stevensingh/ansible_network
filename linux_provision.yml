@@ -1,6 +1,6 @@
 ---
 
-- hosts: Centos_hosts
+- hosts: all
   remote_user: osboxes
   tasks:
 
