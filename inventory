@@ -5,14 +5,10 @@ sw3 ansible_ssh_host=192.168.0.13
 sw4 ansible_ssh_host=192.168.0.14
 sw5 ansible_ssh_host=192.168.0.15
 
-[cisco_L2_switches_server]
-sw21 ansible_ssh_host=192.168.0.21
-
 
 [cisco_nexus]
-nx1 ansible_ssh_host=192.168.0.30 ansible_connection=network_cli ansible_network_os=nxos
-nx2 ansible_ssh_host=192.168.0.31 ansible_connection=network_cli ansible_network_os=nxos
-nx3 ansible_ssh_host=192.168.0.32 ansible_connection=network_cli ansible_network_os=nxos
+nx1 ansible_ssh_host=192.168.0.20 ansible_connection=network_cli ansible_network_os=nxos
+nx2 ansible_ssh_host=192.168.0.21 ansible_connection=network_cli ansible_network_os=nxos
 
 [cisco_l3_routers]
 
