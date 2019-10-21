@@ -1,21 +1,9 @@
-[cisco_L2_switches_mac]
-sw1 ansible_ssh_host=192.168.0.11
-sw2 ansible_ssh_host=192.168.0.12
-sw3 ansible_ssh_host=192.168.0.13
-sw4 ansible_ssh_host=192.168.0.14
-sw5 ansible_ssh_host=192.168.0.15
+
+[centos]
+centos1
+centos2
+centos3
+centos4
+centos5
 
 
-[cisco_nexus]
-nx1 ansible_ssh_host=192.168.0.20 ansible_connection=network_cli ansible_network_os=nxos
-nx2 ansible_ssh_host=192.168.0.21 ansible_connection=network_cli ansible_network_os=nxos
-
-[cisco_l3_routers]
-
-
-
-[Centos_hosts]
-cent1 ansible_ssh_host=192.168.1.234
-cent2 ansible_ssh_host=192.168.1.235
-
-[Ubuntu_hosts]

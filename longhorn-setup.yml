@@ -1,0 +1,12 @@
+---
+# Install longhorn requirements
+- hosts: all
+  become: yes
+  gather_facts: no
+
+  tasks:
+
+  - name: install open-iscsi for rancher longhorn
+    yum:
+      name: iscsi-initiator-utils
+      state: installed

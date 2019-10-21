@@ -1,0 +1,30 @@
+---
+
+- hosts: all
+  tasks:
+
+  - name: "Stopping Docker service"
+    service:
+      name: docker
+      state: stopped
+
+  - name: "Remove Kubernetes Config"
+    file:
+      path: /etc/kubernetes
+      state: absent
+
+  - name: "Remove Docker Folder"
+    file:
+      path: /var/lib/docker/
+      state: absent
+
+  - name: "Create Docker Folder"
+    file:
+      path: /var/lib/docker/
+      state: absent
+
+  - name: "Starting and Enabling Docker service"
+    service:
+      name: docker
+      state: started
+      enabled: yes

@@ -1,6 +1,6 @@
 ---
 
-- hosts: all
+- hosts: docker
   become: yes
   tasks:
   - name: upgrade all packages
